@@ -1,29 +1,40 @@
-<link rel="stylesheet" href="style.css"><!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex | Multi-Creative</title>
-</head>html
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
+
   <div class="container">
-    <!-- Profile Photo -->
     <div class="profile-box">
-      <img src="https://i.postimg.cc/QCLZ1fqw/IMG-20240707-195138.jpg" alt="Alex">
+      <img src="https://i.postimg.cc" alt="Alex">
     </div>
 
     <h1>Alex</h1>
     <p class="subtitle">Web Dev | Music Distro | Artist Handler</p>
 
-    <!-- The Buttons -->
     <div class="links">
       <a href="javascript:void(0)" class="btn email-btn" onclick="copyEmail()">📧 Copy My Email</a>
-
-     <a href="https://wa.me" class="btn web">💻 Build a Website</a>
+      <a href="https://wa.me" class="btn web">💻 Build a Website</a>
       <a href="https://wa.me?text=I%20want%20to%20distribute%20music" class="btn music">🎵 Music Distribution</a>
       <a href="#" class="btn handler">🤝 Artist Management</a>
     </div>
 
     <p class="footer">© 2026 | Kampala, Uganda</p>
   </div>
+
+  <script>
+    function copyEmail() {
+      const email = "yourname@email.com"; // <-- Change this to your real email!
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.querySelector('.email-btn');
+        btn.innerHTML = "✅ Email Copied!";
+        setTimeout(() => { btn.innerHTML = "📧 Copy My Email"; }, 2000);
+      });
+    }
+  </script>
 </body>
 </html>
